@@ -1,13 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from '../../services/home'
-
-export interface DataUser {
-  id: number;
-  name: string;
-  telefono: number;
-  email: string;
-}
-
+import { HomeService } from '../../services/home';
+import { DataUser } from '../../interfaces/IServiceUser';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +9,7 @@ export interface DataUser {
   styleUrl: './home.scss'
 })
 export class Home implements OnInit {
-  dataUser: any;
+  dataUser: DataUser[] = [];
 
   constructor(private apiService: HomeService) { }
 
