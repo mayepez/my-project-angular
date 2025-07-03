@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>información de usuarios</h2>
+    <br>
+    <div class="row">
+        <div class="col" style="height: 700px; overflow-y: scroll;">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre completo</th>
+                        <th scope="col">teléfono</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (data of dataUser; track data.id) {
+                    <tr>
+                        <th scope="row">{{data.id}}</th>
+                        <td>{{data.name}}</td>
+                        <td>{{data.telefono}}</td>
+                        <td>{{data.email}}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
